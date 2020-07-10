@@ -33,7 +33,10 @@ export default merge(baseConfig, {
 
   plugins: [
     copy({
-      targets: [{ src: 'assets', dest: 'dist' }],
+      targets: [
+        { src: 'assets', dest: 'dist' },
+        { src: ['CNAME'], dest: 'dist' },
+      ],
       // set flatten to false to preserve folder structure
       flatten: false,
     }),
