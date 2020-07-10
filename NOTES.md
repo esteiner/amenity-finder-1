@@ -16,3 +16,6 @@
           <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
       ```
     - Add sidebar property, toggle method + `MDCDrawer:closed` listener! 
+- Update dependencies `$ npx npm-upgrade`
+    - Remove `git add` in `lint-staged` in `package.json`
+    - Install `eslint-plugin-lit` for more recommended code style checks
