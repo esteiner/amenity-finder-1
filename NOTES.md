@@ -20,3 +20,9 @@
 - Update dependencies `$ npx npm-upgrade`
     - Remove `git add` in `lint-staged` in `package.json`
     - Install `eslint-plugin-lit` for more recommended code style checks
+    
+## Links
+
+- Material WC
+  - https://material-components.github.io/material-components-web-components/demos/index.html
+  - https://github.com/material-components/material-components-web-components
