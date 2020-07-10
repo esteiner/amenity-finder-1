@@ -9,12 +9,13 @@
     - The separation only makes sense if we want to provide JS Classes + Custom Elements separately
 - Add basic layout with Material WC:
     - Install components `$ npm install @material/mwc-top-app-bar-fixed @material/mwc-icon @material/mwc-icon-button @material/mwc-drawer`
-    - Add fonts
+    - Add fonts (https://github.com/material-components/material-components-web-components#fonts)
       ```
           <!-- Your application must load the Roboto and Material Icons fonts. -->
           <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
           <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
       ```
+      Use same font as default: `font-family: 'Roboto', sans-serif;` (in `index.html`)
     - Add sidebar property, toggle method + `MDCDrawer:closed` listener! 
 - Update dependencies `$ npx npm-upgrade`
     - Remove `git add` in `lint-staged` in `package.json`
