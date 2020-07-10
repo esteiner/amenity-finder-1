@@ -5,6 +5,8 @@ import '@material/mwc-drawer';
 import '@material/mwc-icon';
 import '@material/mwc-icon-button';
 import '@material/mwc-top-app-bar-fixed';
+import '@material/mwc-list/mwc-list.js';
+import '@material/mwc-list/mwc-list-item.js';
 
 import { lazyLoad } from './utils/lazy-loading.js';
 
@@ -46,12 +48,14 @@ export class AmenityFinder extends LitElement {
         }}"
       >
         <span slot="title">Menu</span>
-        <nav class="container">
-          <a href="/" @click="${this._navigateToUrl}">Home</a>
-          <a href="/search" @click="${this._navigateToUrl}">Search</a>
-          <a href="/results" @click="${this._navigateToUrl}">Results</a>
-          <a href="/about" @click="${this._navigateToUrl}">About</a>
-          <a href="/123" @click="${this._navigateToUrl}">123</a>
+        <nav class="sidebar">
+          <mwc-list>
+            <mwc-list-item @request-selected="${() => this._navigateToUrl('/')}">Home</mwc-list-item>
+            <mwc-list-item @request-selected="${() => this._navigateToUrl('/search')}">Search</mwc-list-item>
+            <mwc-list-item @request-selected="${() => this._navigateToUrl('/results')}">Results</mwc-list-item>
+            <mwc-list-item @request-selected="${() => this._navigateToUrl('/about')}">About</mwc-list-item>
+            <mwc-list-item @request-selected="${() => this._navigateToUrl('/123')}">123</mwc-list-item>
+          </mwc-list>
         </nav>
         <div slot="appContent">
           <mwc-top-app-bar-fixed>
@@ -95,14 +99,18 @@ export class AmenityFinder extends LitElement {
    * @private
    */
   // eslint-disable-next-line class-methods-use-this
-  _navigateToUrl(e) {
+  _navigateToUrlFromEventTarget(e) {
     e.preventDefault();
     const { target } = e;
     if (!target || !target.hasAttribute('href')) {
       return;
     }
 
-    page(target.getAttribute('href'));
+    this._navigateToUrl(target.getAttribute('href'));
+  }
+
+  _navigateToUrl(url) {
+    page(url);
 
     this._closeSidebar();
   }
