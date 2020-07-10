@@ -60,24 +60,14 @@ export class AmenityFinder extends LitElement {
         <h1>My app</h1>
 
         <p>Edit <code>src/AmenityFinder.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/developing/#code-examples"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="app-link" href="https://open-wc.org/developing/#code-examples" target="_blank" rel="noopener noreferrer">
           Code examples
         </a>
       </main>
 
       <p class="app-footer">
         🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/open-wc">open-wc</a>.
       </p>
     `;
   }
