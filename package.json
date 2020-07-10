@@ -51,7 +51,11 @@
   "author": "amenity-finder",
   "license": "MIT",
   "dependencies": {
-    "lit-html": "^1.0.0",
-    "lit-element": "^2.0.1"
+    "@material/mwc-drawer": "^0.17.2",
+    "@material/mwc-icon": "^0.17.2",
+    "@material/mwc-icon-button": "^0.17.2",
+    "@material/mwc-top-app-bar-fixed": "^0.17.2",
+    "lit-element": "^2.0.1",
+    "lit-html": "^1.0.0"
   }
 }
